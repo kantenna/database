@@ -149,18 +149,18 @@ select * from exam.exam_date_table edt ;
 
 -- localhost : 내 컴퓨터( 로컬 접속만 가능)
 -- % : 모든 아이피에서 접속가능(외부접속 가능)
-CREATE USER 'TEST1'@'loacalhost' IDENTIFIED BY '12345';
+CREATE USER 'javadb'@'localhost' IDENTIFIED BY '12345';
 -- CREATE USER 'TEST1'@'%' IDENTIFIED BY '12345';
 
 -- 권한 부여
 -- grant 권한 목록 on 데이터베이스명.테이블 to '사용자이름'@'호스트'
 -- grant select, insert,update on exam.table1 to 'test1'@'localhost'
-grant all privileges on exam.* to 'test1'@'localhost';
+grant all privileges on exam.* to 'javadb'@'localhost';
 -- 변경사항 반영
 flush privileges;
 
 -- 사용자 삭제
-drop user 'TEST1'@'loacalhost';
+drop user 'javadb'@'localhost';
 
 -- 비밀번호 변경
 -- ALTER USER 'TEST1'@'loacalhost' IDENTIFIED BY 변경할 비밀번호;
